@@ -4,12 +4,13 @@
 
 using namespace std;
 
-Character::Character(string name, int level, int health, int attack, int experience, int critical_hit_chance) 
+Character::Character(string name, int level, int health, int attack, int defense, int experience, int critical_hit_chance) 
 {
     this->name = name;
     this->level = level;
     this->health = health;
     this->attack = attack;
+    this->defense = defense;
     this->experience = experience;
     this->critical_hit_chance = critical_hit_chance;
 }

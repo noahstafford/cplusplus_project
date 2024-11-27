@@ -8,7 +8,7 @@ using namespace std;
 class Dungeon
 {
     public:
-        Dungeon();
+        Dungeon(int num_of_rooms, int difficulty);
         void create_room();
         void create_encounter();
         void spawn_monster();

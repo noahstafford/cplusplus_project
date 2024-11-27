@@ -8,20 +8,22 @@ using namespace std;
 class Monster
 {
     public:
-        Monster (string name, int health, int attack_damage, int experience_for_killing);
-        int attack();
+        Monster (string name, int health, int attack, int defense, int experience_for_killing, int difficulty);
+        int attack_player();
         int defend();
-        void get_health();
-        void set_health();
-        void get_attack_damage();
-        void set_attack_damage();
-        void get_experience_for_killing();
-        void set_experience_for_killing();
+        int get_health();
+        void set_health(int new_health);
+        int get_attack_damage();
+        void set_attack_damage(int new_attack_damage);
+        int get_experience_for_killing();
+        void set_experience_for_killing(int new_experience_for_killing);
     private:
         string name;
         int health;
-        int attack_damage;
+        int attack;
+        int defense;
         int experience_for_killing;
+        int difficulty;
 };
 
 #endif
