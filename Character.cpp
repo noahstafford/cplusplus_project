@@ -4,40 +4,50 @@
 
 using namespace std;
 
-Character::Character(string name, int level, int health, int attack, int defense, int experience, int critical_hit_chance) 
+Character::Character(string name) 
 {
     this->name = name;
-    this->level = level;
-    this->health = health;
-    this->attack = attack;
-    this->defense = defense;
-    this->experience = experience;
-    this->critical_hit_chance = critical_hit_chance;
+    level = 0;
+    health = 100;
+    attack = 10;
+    defense = 5;
+    experience = 0;
+    experience_to_level_up = 100;
+    critical_hit_chance = 5;
 }
 
 void Character::level_up() {
-    if (experience >= experience_to_level_up) {
+    while (experience >= experience_to_level_up) {
         level++;
-        experience = 0;
+        experience = experience-experience_to_level_up;
         experience_to_level_up += (experience_to_level_up * .25);
-        critical_hit_chance++;
+        critical_hit_chance += 5;
+        defense += (defense * .1);
+        health += (health * .1);
     } 
 }
 
 int Character::attack_enemy() {
-    return attack; //this will eventually factor in critical hits and missing and stuff
+    int randomNum = rand() % 101;
+    if (critical_hit_chance > randomNum) {
+        return attack * 3;
+    }
+    return attack;
 }
 
 int Character::defend(int damage_taken) {
-    return 1;
+    health = health - (damage_taken/3);
+    return damage_taken/3;
 }
 
 int Character::take_damage(int damage_taken){
-    return 1;
+    health = health - damage_taken;
+    return damage_taken;
 }
 
 int Character::heal(int healing_taken){
-    return 1;
+    health += healing_taken;
+    return health;
 }
 
 int Character::get_level() {

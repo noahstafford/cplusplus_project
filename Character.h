@@ -8,7 +8,7 @@ using namespace std;
 class Character
 {
     public:
-        Character (string name, int level, int health, int attack, int defense, int experience, int critical_hit_chance);
+        Character (string name);
         void level_up();
         int attack_enemy();
         int defend(int damage_taken);
