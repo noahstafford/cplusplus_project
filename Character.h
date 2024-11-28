@@ -24,6 +24,7 @@ class Character
         void set_experience(int experience_gained);
         int get_experience_to_level_up();
         void set_experience_to_level_up();
+        string get_name();
     private:
         string name;
         int level;

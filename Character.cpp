@@ -63,3 +63,7 @@ int Character::get_experience() {
 void Character::set_experience(int experience_gained) {
     experience += experience_gained;
 }
+
+string Character::get_name() {
+    return name;
+}
