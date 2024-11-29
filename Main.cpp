@@ -23,12 +23,7 @@ int main() {
     }
 
     Character player(name);
-    cout << player.get_name() << endl;
-    cout << player.get_experience() << endl;
     player.set_experience(123);
-    cout << player.get_experience() << endl;
     player.level_up();
-    cout << player.get_level() << endl;
-    cout << player.get_experience() << endl;
-
+    player.get_stats();
 }

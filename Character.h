@@ -25,10 +25,12 @@ class Character
         int get_experience_to_level_up();
         void set_experience_to_level_up();
         string get_name();
+        void get_stats();
     private:
         string name;
         int level;
-        int health;
+        int current_health;
+        int max_health;
         int defense;
         int attack;
         int critical_hit_chance;
