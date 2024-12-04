@@ -30,17 +30,43 @@ void Dungeon::random_event() {
 
 void Dungeon::select_next_room() {
     vector<string> rooms = generate_dungeon();
+    string choice = "";
+    bool validchoice = false;
+
+    while (choice != "w" && choice != "n" && choice != "e" && choice != "u" && choice != "d" && validchoice == false) {
+        cout << "It is time to select a new room to traverse." << endl;
+        for (int x = 0; x < rooms.size(); x++) {
+            cout << rooms[x] << endl;
+        }
+
+        cout << "What is your choice? ";
+        cin >> choice;
+        validate_choice(choice, rooms);
+}
+
+}
+
+bool Dungeon::validate_choice(string choice, vector<string> rooms) {
+
+    if (choice == "w" && rooms.size() >= 0) {
+        return true;
+    }
+    else if (choice == "n" && rooms.size() >= 1) {
+        return true;
+    }
+    else if (choice == "e" && rooms.size() >= 3) {
+        return true;
+    }
+    else if (choice == "u" && rooms.size() >= 4) {
+        return true;
+    }
+    else if (choice == "d" && rooms.size() >= 5) {
+        return true;
+    }
 }
 
 vector<string> Dungeon::generate_dungeon() {
     int num_of_connecting_rooms = (rand() % 5) + 1; //gets number 1-5
-    if (num_of_connecting_rooms == 1) {
-        cout << "You have " << num_of_connecting_rooms << " option on where to go next.";
-    }
-    else {
-        cout << "You have " << num_of_connecting_rooms << " options on where to go next.";
-    }
-
     vector<string> rooms;
     rooms.push_back("There is a door to the West. (w)");
 
