@@ -13,6 +13,8 @@ class Dungeon
         void create_encounter();
         void spawn_monster();
         void random_event();
+        vector<string> generate_dungeon();
+        void select_next_room();
     private:
         string room_description;
         int num_of_rooms;

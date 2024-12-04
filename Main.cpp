@@ -23,6 +23,14 @@ int main() {
     }
 
     Character player(name);
+    Dungeon dungeon(rooms, difficulty);
+    
+    
+    for (int x = 0; x < rooms; x++) {
+        dungeon.generate_dungeon();
+
+    }
+
     player.set_experience(123);
     player.level_up();
     player.get_stats();

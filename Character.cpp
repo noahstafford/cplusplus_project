@@ -33,6 +33,9 @@ int Character::attack_enemy() {
     if (critical_hit_chance > randomNum) {
         return attack * 3;
     }
+    else if (critical_hit_chance == 0) {
+        return 0;   //missed attack
+    }
     return attack;
 }
 
