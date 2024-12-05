@@ -46,7 +46,9 @@ int Character::defend(int damage_taken) {
 }
 
 int Character::take_damage(int damage_taken){
+    damage_taken = damage_taken - (defense / 3);
     current_health = current_health - damage_taken;
+    cout << "It attacks for " << damage_taken << " damage." << endl;
     return damage_taken;
 }
 
@@ -95,6 +97,49 @@ void Character::get_stats() {
     cout << "Defense: " << defense << endl;
 }
 
+void Character::players_turn() {
+
+}
+
 void Character::start_battle(Monster monster) {
+    bool isitplayersturn = false;
+    int num = rand() % 2;
+    bool first_turn = true;
+
+    if (num == 0) {
+        isitplayersturn = true;
+    }
+
+    cout << "You encounter a " << monster.get_name() << "..." << endl;
+    cout << "Coin flip....";
+
+    while (current_health > 0) {
+        if (isitplayersturn) {
+            if (first_turn) { 
+                cout << "Your turn is first." << endl; 
+                first_turn = false;
+            }
+            else {
+                cout << "It's now your turn." << endl;
+            }
+            players_turn();
+            isitplayersturn = false;
+            cout << name << "'s current health: " << current_health << "/" << max_health << endl;
+        }
+        else {
+            if (first_turn) {
+                cout << "It attacks first." << endl;
+                first_turn = false;
+            }
+            else {
+                cout << "It's now their turn. Prepare.." << endl;
+            }
+    
+            cout << monster.get_description() << endl;
+            take_damage(monster.attack_player());
+            isitplayersturn = true;
+        }
+    }
+
     
 }

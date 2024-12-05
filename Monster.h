@@ -10,7 +10,7 @@ class Monster
 {
     public:
         Monster (string name, int health, int attack, int defense, int experience_for_killing, string description);
-        Monster spawn_monster(vector<string> monster_list, int difficulty);
+        Monster spawn_monster(int difficulty);
         int attack_player();
         int defend();
         int get_health();
@@ -19,6 +19,8 @@ class Monster
         void set_attack_damage(int new_attack_damage);
         int get_experience_for_killing();
         void set_experience_for_killing(int new_experience_for_killing);
+        string get_name();
+        string get_description();
     private:
         string name;
         int health;
@@ -26,6 +28,7 @@ class Monster
         int defense;
         int experience_for_killing;
         int difficulty;
+        string description;
 };
 
 #endif

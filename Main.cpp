@@ -24,7 +24,7 @@ int main() {
 
     Character player(name);
     Dungeon dungeon(rooms, difficulty);
-    Monster monster(difficulty);
+    Monster monster("", 0, 0, 0, 0, "");
     
     for (int x = 0; x < rooms; x++) {
         cout << endl;

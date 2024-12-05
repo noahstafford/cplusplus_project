@@ -11,11 +11,11 @@ Monster::Monster(string name, int health, int attack, int defense, int experienc
     this->attack = attack;
     this->defense = defense;
     this->experience_for_killing = experience_for_killing;
-    this->difficulty = difficulty;
+    this->description = description;
 }
 
 
-Monster spawn_monster(vector<string> monster_list, int difficulty) {
+Monster spawn_monster(int difficulty) {
     int num = (rand() % difficulty) + 1;
     if (num == 1) {
         Monster monster("Rat", 10, 2, 2, 15, "The rat scurries around on the floor. It attempts to scratch you.");
@@ -68,4 +68,12 @@ int Monster::get_experience_for_killing() {
 
 void Monster::set_experience_for_killing(int new_experience_for_killing) {
     experience_for_killing = new_experience_for_killing;
+}
+
+string Monster::get_name() {
+    return name;
+}
+
+string Monster::get_description() {
+    return description;
 }
