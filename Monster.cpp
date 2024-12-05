@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Monster::Monster(string name, int health, int attack, int defense, int experience_for_killing, int difficulty) {
+Monster::Monster(int difficulty) {
     this->name = name;
     this->health = health;
     this->attack = attack;

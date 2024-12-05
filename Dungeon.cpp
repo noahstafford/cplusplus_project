@@ -2,6 +2,7 @@
 #include <string>
 #include "Dungeon.h"
 #include <vector>
+#include "Monster.h"
 
 using namespace std;
 
@@ -13,17 +14,18 @@ Dungeon::Dungeon(int num_of_rooms, int difficulty) {
 
 void Dungeon::create_room(string choice) {
     cout << random_description() << endl;
-    spawn_monster();
+    Monster monster = spawn_monster();
     create_encounter();
-    
+
 }
 
 void Dungeon::create_encounter() {
 
 }
 
-void Dungeon::spawn_monster() {
-
+Monster Dungeon::spawn_monster() {
+    int num = (rand() % difficulty) + 1;
+    return Monster(num);
 }
 
 void Dungeon::random_event() {

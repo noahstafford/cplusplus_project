@@ -8,7 +8,7 @@ using namespace std;
 class Monster
 {
     public:
-        Monster (string name, int health, int attack, int defense, int experience_for_killing, int difficulty);
+        Monster (int difficulty);
         int attack_player();
         int defend();
         int get_health();

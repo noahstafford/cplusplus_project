@@ -27,11 +27,11 @@ int main() {
     
     
     for (int x = 0; x < rooms; x++) {
-        dungeon.generate_dungeon();
-
+        cout << endl;
+        dungeon.select_next_room();
+        cout << endl;
     }
 
-    player.set_experience(123);
-    player.level_up();
+    cout << "Congratulations, you reached the end." << endl;
     player.get_stats();
 }

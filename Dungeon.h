@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Monster.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ class Dungeon
         Dungeon(int num_of_rooms, int difficulty);
         void create_room(string choice);
         void create_encounter();
-        void spawn_monster();
+        Monster spawn_monster();
         void random_event();
         vector<string> generate_dungeon();
         bool validate_choice(string choice, vector<string> rooms);

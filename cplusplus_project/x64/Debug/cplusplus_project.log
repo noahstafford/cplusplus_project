@@ -1,9 +1,2 @@
-﻿  Character.cpp
-C:\Users\noahs\source\repos\cplusplus_project\Character.cpp(24,59): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\noahs\source\repos\cplusplus_project\Character.cpp(26,29): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\noahs\source\repos\cplusplus_project\Character.cpp(27,35): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  Dungeon.cpp
-  Main.cpp
-  Monster.cpp
-  Generating Code...
+﻿  Main.cpp
   cplusplus_project.vcxproj -> C:\Users\noahs\source\repos\cplusplus_project\x64\Debug\cplusplus_project.exe
