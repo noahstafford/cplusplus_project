@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Character.h"
+#include "Monster.h"
 
 using namespace std;
 
@@ -92,4 +93,8 @@ void Character::get_stats() {
     cout << "Experience: " << experience << "/" << experience_to_level_up << endl;
     cout << "Attack: " << attack << endl;
     cout << "Defense: " << defense << endl;
+}
+
+void Character::start_battle(Monster monster) {
+    
 }

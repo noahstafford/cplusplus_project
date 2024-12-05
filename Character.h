@@ -2,6 +2,7 @@
 #define CHARACTER_H
 #include <iostream>
 #include <string>
+#include "Monster.h"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ class Character
         void set_experience_to_level_up();
         string get_name();
         void get_stats();
+        void start_battle(Monster monster);
     private:
         string name;
         int level;

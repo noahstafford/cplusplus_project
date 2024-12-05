@@ -2,13 +2,15 @@
 #define MONSTER_H
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class Monster
 {
     public:
-        Monster (int difficulty);
+        Monster (string name, int health, int attack, int defense, int experience_for_killing, string description);
+        Monster spawn_monster(vector<string> monster_list, int difficulty);
         int attack_player();
         int defend();
         int get_health();

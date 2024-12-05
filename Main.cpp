@@ -13,7 +13,7 @@ int main() {
     cin >> name;
     int difficulty = 0;
     while (difficulty > 5 || difficulty < 1) {
-        cout << "How difficult do you want the game to be? Scale of 1-5 ";
+        cout << "How difficult do you want the game to be, scale of 1-5? ";
         cin >> difficulty;
     }
     int rooms = 0;
@@ -24,11 +24,13 @@ int main() {
 
     Character player(name);
     Dungeon dungeon(rooms, difficulty);
-    
+    Monster monster(difficulty);
     
     for (int x = 0; x < rooms; x++) {
         cout << endl;
         dungeon.select_next_room();
+        monster.spawn_monster(difficulty);
+        player.start_battle(monster);
         cout << endl;
     }
 

@@ -1,16 +1,45 @@
 #include <iostream>
 #include <string>
 #include "Monster.h"
+#include <vector>
 
 using namespace std;
 
-Monster::Monster(int difficulty) {
+Monster::Monster(string name, int health, int attack, int defense, int experience_for_killing, string description) {
     this->name = name;
     this->health = health;
     this->attack = attack;
     this->defense = defense;
     this->experience_for_killing = experience_for_killing;
     this->difficulty = difficulty;
+}
+
+
+Monster spawn_monster(vector<string> monster_list, int difficulty) {
+    int num = (rand() % difficulty) + 1;
+    if (num == 1) {
+        Monster monster("Rat", 10, 2, 2, 15, "The rat scurries around on the floor. It attempts to scratch you.");
+        return monster;
+    }
+    else if (num == 2) {
+        Monster monster("Bat", 15, 3, 5, 20, "The bat flys at you and attempts to bite you.");
+        return monster;
+    }
+    else if (num == 3) {
+        Monster monster("Slime", 20, 4, 7, 25, "The slime bounces and jiggles towards you. An arm oozes out and attempts to hit you.");
+        return monster;
+    }
+    else if (num == 4) {
+        Monster monster("Skeleton", 25, 5, 10, 30, "The skeleton readies his sword and swings.");
+        return monster;
+    }
+    else if (num == 5) {
+        Monster monster("Wizard", 30, 6, 15, 35, "The wizard raises his staff into the air and casts a spell.");
+        return monster;
+    }
+
+    Monster monster("Rat", 10, 2, 2, 15, "The rat scurries around on the floor. It attempts to scratch you.");
+    return monster;
 }
 
 int Monster::attack_player(){
