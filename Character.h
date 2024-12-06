@@ -28,7 +28,7 @@ class Character
         string get_name();
         void get_stats();
         void start_battle(Monster monster);
-        void players_turn(Monster monster);
+        int players_turn();
     private:
         string name;
         int level;

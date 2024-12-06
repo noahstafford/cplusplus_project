@@ -100,6 +100,9 @@ int Monster::get_health(){
 
 void Monster::set_health(int new_health){
     health = new_health;
+    if (health < 0) {
+        health = 0;
+    }
 }
 
 void Monster::set_attack_damage(int new_attack_damage) {

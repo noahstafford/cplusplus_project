@@ -32,13 +32,18 @@ void Character::level_up() {
 
 int Character::attack_enemy() {
     int randomNum = rand() % 101;
+    
     if (critical_hit_chance > randomNum) {
         cout << "CRITICAL HIT!" << endl;
         return attack * 3;
     }
-    else if (critical_hit_chance == 0) {
+    else if (randomNum == 0) {
         cout << "YOU MISSED!" << endl;
         return 0;   //missed attack
+    }
+    else {
+        cout << "You hit!" << endl;
+        return attack;
     }
     return attack;
 }
@@ -100,7 +105,8 @@ void Character::get_stats() {
     cout << "Defense: " << defense << endl;
 }
 
-void Character::players_turn(Monster monster) {
+int Character::players_turn() {
+    int damage;
     cout << "What are you going to do?" << endl;
     bool validoption = false;
     string option = "";
@@ -114,9 +120,11 @@ void Character::players_turn(Monster monster) {
 
     if (option == "a") {
         cout << "You attempt to attack the enemy." << endl;
-        attack_enemy();
-        //cout << "You damage the enemy for " << damage << " hp" << endl; 
+        damage = attack_enemy();
+        cout << "You damage the enemy for " << damage << " hp" << endl; 
+        return damage;
         //monster.set_health(monster.get_health() - damage);
+        //cout << monster.get_name() << "'s current health: " << monster.get_health() << endl;
     }
     else if (option == "d") {
         cout << "You are now defending." << endl;
@@ -127,6 +135,7 @@ void Character::players_turn(Monster monster) {
         heal(max_health / 5);
 
     }
+    return 0;
 }
 
 void Character::start_battle(Monster monster) {
@@ -151,9 +160,13 @@ void Character::start_battle(Monster monster) {
             else {
                 cout << "It's now your turn." << endl;
             }
-            players_turn(monster);
+            damage_taken = players_turn();
+            if (damage_taken > 0) {
+                monster.set_health(monster.get_health() - damage_taken);
+                cout << monster.get_name() << "'s current health: " << monster.get_health() << endl;
+            }
             isitplayersturn = false;
-            cout << name << "'s current health: " << current_health << "/" << max_health << endl;
+            
         }
         else {
             if (first_turn) {
@@ -175,14 +188,15 @@ void Character::start_battle(Monster monster) {
                 take_damage(monster.attack_player());
             }
             isitplayersturn = true;
+            cout << name << "'s current health: " << current_health << "/" << max_health << endl;
         }
-        if (current_health == 0) {
-            cout << "YOU DIED!" << endl;
-        }
-        else {
-            cout << "The " << monster.get_name() << " died." << endl;
-        }
+        
     }
-
+    if (current_health == 0) {
+        cout << "YOU DIED!" << endl;
+    }
+    else {
+        cout << "The " << monster.get_name() << " died." << endl;
+    }
     
 }
