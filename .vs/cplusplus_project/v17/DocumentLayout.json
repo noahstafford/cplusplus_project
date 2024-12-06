@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|solutionrelative:Character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|solutionrelative:Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|solutionrelative:Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|solutionrelative:Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{525884FC-223F-4AF3-AB51-E728494B1CE8}|cplusplus_project\\cplusplus_project.vcxproj|C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Monster.h",
               "ToolTip": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Monster.h",
               "RelativeToolTip": "Monster.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-04T22:33:16.442Z",
               "IsPinned": true
@@ -59,16 +59,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Character.h",
               "DocumentMoniker": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Character.h",
               "RelativeDocumentMoniker": "Character.h",
               "ToolTip": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Character.h",
               "RelativeToolTip": "Character.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T22:33:10.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T22:33:10.984Z"
             },
             {
               "$type": "Document",
@@ -84,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Main.cpp",
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-03T20:05:29.449Z"
             },
@@ -102,32 +101,32 @@
               "RelativeDocumentMoniker": "Character.cpp",
               "ToolTip": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Character.cpp",
               "RelativeToolTip": "Character.cpp",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIEAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAGkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-04T20:01:59.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Dungeon.cpp",
               "DocumentMoniker": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Dungeon.cpp",
               "RelativeDocumentMoniker": "Dungeon.cpp",
               "ToolTip": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Dungeon.cpp",
               "RelativeToolTip": "Dungeon.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-04T20:02:05.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Monster.cpp",
               "DocumentMoniker": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Monster.cpp",
               "RelativeDocumentMoniker": "Monster.cpp",
               "ToolTip": "C:\\Users\\noahs\\source\\repos\\cplusplus_project\\Monster.cpp",
               "RelativeToolTip": "Monster.cpp",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-04T20:02:06.989Z"
             }

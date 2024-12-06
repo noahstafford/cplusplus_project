@@ -28,7 +28,7 @@ class Character
         string get_name();
         void get_stats();
         void start_battle(Monster monster);
-        void players_turn();
+        void players_turn(Monster monster);
     private:
         string name;
         int level;
@@ -39,6 +39,7 @@ class Character
         int critical_hit_chance;
         int experience;
         int experience_to_level_up;
+        bool defending;
 };
 
 #endif

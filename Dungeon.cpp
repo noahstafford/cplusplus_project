@@ -14,18 +14,11 @@ Dungeon::Dungeon(int num_of_rooms, int difficulty) {
 
 void Dungeon::create_room(string choice) {
     cout << random_description() << endl;
-    Monster monster = spawn_monster();
-    create_encounter();
 
 }
 
 void Dungeon::create_encounter() {
 
-}
-
-Monster Dungeon::spawn_monster() {
-    int num = (rand() % difficulty) + 1;
-    return Monster(num);
 }
 
 void Dungeon::random_event() {

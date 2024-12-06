@@ -9,7 +9,7 @@ using namespace std;
 class Monster
 {
     public:
-        Monster (string name, int health, int attack, int defense, int experience_for_killing, string description);
+        Monster (int difficulty);
         Monster spawn_monster(int difficulty);
         int attack_player();
         int defend();
@@ -21,13 +21,13 @@ class Monster
         void set_experience_for_killing(int new_experience_for_killing);
         string get_name();
         string get_description();
+        string get_info();
     private:
         string name;
         int health;
         int attack;
         int defense;
         int experience_for_killing;
-        int difficulty;
         string description;
 };
 

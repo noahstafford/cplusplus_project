@@ -24,13 +24,19 @@ int main() {
 
     Character player(name);
     Dungeon dungeon(rooms, difficulty);
-    Monster monster("", 0, 0, 0, 0, "");
+    //Monster monster("", 0, 0, 0, 0, "");
+    //Monster monster(difficulty);
     
     for (int x = 0; x < rooms; x++) {
         cout << endl;
         dungeon.select_next_room();
-        monster.spawn_monster(difficulty);
+       // monster.spawn_monster(difficulty);
+        Monster monster(difficulty);
+        monster.get_info();
         player.start_battle(monster);
+        if (player.get_health() <= 0) {
+            x = rooms;
+        }
         cout << endl;
     }
 

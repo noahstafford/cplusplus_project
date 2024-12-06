@@ -5,16 +5,59 @@
 
 using namespace std;
 
-Monster::Monster(string name, int health, int attack, int defense, int experience_for_killing, string description) {
-    this->name = name;
-    this->health = health;
-    this->attack = attack;
-    this->defense = defense;
-    this->experience_for_killing = experience_for_killing;
-    this->description = description;
+Monster::Monster(int difficulty) {
+    int num = (rand() % difficulty) + 1;
+    if (num == 1) {
+        name = "Rat";
+        health = 10;
+        attack = 2;
+        defense = 2;
+        experience_for_killing = 15;
+        description = "The rat scurries around on the floor. It attempts to scratch you.";
+    }
+    else if (num == 2) {
+        name = "Bat";
+        health = 15;
+        attack = 3;
+        defense = 5;
+        experience_for_killing = 20;
+        description = "The bat flys at you and attempts to bite you.";
+        //Monster monster("Bat", 15, 3, 5, 20, "The bat flys at you and attempts to bite you.");
+        
+    }
+    else if (num == 3) {
+        name = "Slime";
+        health = 20;
+        attack = 4;
+        defense = 7;
+        experience_for_killing = 25;
+        description = "The slime bounces and jiggles towards you. An arm oozes out and attempts to hit you.";
+        //Monster monster("Slime", 20, 4, 7, 25, "The slime bounces and jiggles towards you. An arm oozes out and attempts to hit you.");
+        
+    }
+    else if (num == 4) {
+        name = "Skeleton";
+        health = 25;
+        attack = 5;
+        defense = 10;
+        experience_for_killing = 30;
+        description = "The skeleton readies his sword and swings.";
+        //Monster monster("Skeleton", 25, 5, 10, 30, "The skeleton readies his sword and swings.");
+        
+    }
+    else if (num == 5) {
+        name = "Wizard";
+        health = 30;
+        attack = 6;
+        defense = 15;
+        experience_for_killing = 35;
+        description = "The wizard raises his staff into the air and casts a spell.";
+        //Monster monster("Wizard", 30, 6, 15, 35, "The wizard raises his staff into the air and casts a spell.");
+        
+    }
 }
 
-
+/*
 Monster spawn_monster(int difficulty) {
     int num = (rand() % difficulty) + 1;
     if (num == 1) {
@@ -41,6 +84,7 @@ Monster spawn_monster(int difficulty) {
     Monster monster("Rat", 10, 2, 2, 15, "The rat scurries around on the floor. It attempts to scratch you.");
     return monster;
 }
+*/
 
 int Monster::attack_player(){
     return attack;
@@ -76,4 +120,8 @@ string Monster::get_name() {
 
 string Monster::get_description() {
     return description;
+}
+
+string Monster::get_info() {
+    return name + " has " + to_string(health) + " hp ";
 }
