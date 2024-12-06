@@ -2,6 +2,7 @@
 #include <string>
 #include "Character.h"
 #include "Monster.h"
+#include <ctime>
 
 using namespace std;
 
@@ -14,23 +15,37 @@ Character::Character(string name)
     attack = 10;
     defense = 5;
     experience = 0;
-    experience_to_level_up = 100;
+    experience_to_level_up = 50;
     critical_hit_chance = 5;
     defending = false;
 }
 
 void Character::level_up() {
     while (experience >= experience_to_level_up) {
+        cout << "LEVEL UP!" << endl;
+        cout << "Level: " << level << " -> ";
         level++;
+        cout << level << endl;
         experience = experience - experience_to_level_up;
+        cout << "Experience needed for next level up: " << experience_to_level_up << " -> ";
         experience_to_level_up += (experience_to_level_up * .25);
+        cout << experience_to_level_up << endl;
+        cout << "Critical hit chance: " << critical_hit_chance << " -> ";
         critical_hit_chance += 2;
-        defense += (defense * .1);
+        cout << critical_hit_chance << endl;
+        cout << "Defense: " << defense << " -> ";
+        defense += 1;
+        cout << defense << endl;
+        cout << "Max Health: " << max_health << " -> ";
         max_health += (max_health * .1);
+        cout << max_health << endl;
+        current_health = max_health;
+        cout << "You have been healed to full health!" << endl;
     } 
 }
 
 int Character::attack_enemy() {
+    srand(time(0));
     int randomNum = rand() % 101;
     
     if (critical_hit_chance > randomNum) {
@@ -61,11 +76,16 @@ int Character::take_damage(int damage_taken){
 }
 
 int Character::heal(int healing_taken){
+    int actual_healing;
     if ((current_health + healing_taken) > max_health) {
+        actual_healing = max_health - current_health;
         current_health = max_health;
     } else {
+        actual_healing = healing_taken;
         current_health += healing_taken;
     }
+    
+    cout << "You healed " << actual_healing << "hp. Your health is now " << current_health << "." << endl;
     return current_health;
 }
 
@@ -91,6 +111,10 @@ int Character::get_experience() {
 
 void Character::set_experience(int experience_gained) {
     experience += experience_gained;
+    cout << "You gained " << experience_gained << " xp!" << endl;
+    if (experience >= experience_to_level_up) {
+        level_up();
+    }
 }
 
 string Character::get_name() {
@@ -139,6 +163,7 @@ int Character::players_turn() {
 }
 
 void Character::start_battle(Monster monster) {
+    srand(time(0));
     bool isitplayersturn = false;
     int num = rand() % 2;
     bool first_turn = true;
@@ -197,6 +222,7 @@ void Character::start_battle(Monster monster) {
     }
     else {
         cout << "The " << monster.get_name() << " died." << endl;
+        set_experience(monster.get_experience_for_killing());
     }
     
 }

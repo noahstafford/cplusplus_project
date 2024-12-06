@@ -3,6 +3,7 @@
 #include "Dungeon.h"
 #include <vector>
 #include "Monster.h"
+#include <ctime>
 
 using namespace std;
 
@@ -26,6 +27,7 @@ void Dungeon::random_event() {
 }
 
 void Dungeon::select_next_room() {
+    srand(time(0));
     vector<string> rooms = generate_dungeon();
     string choice = "";
     bool validchoice = false;
@@ -76,6 +78,7 @@ bool Dungeon::validate_choice(string choice, vector<string> rooms) {
 }
 
 vector<string> Dungeon::generate_dungeon() {
+    srand(time(0));
     int num_of_connecting_rooms = (rand() % 5) + 1; //gets number 1-5
     vector<string> rooms;
     rooms.push_back("There is a door to the West. (w)");
@@ -98,6 +101,7 @@ vector<string> Dungeon::generate_dungeon() {
 }
 
 string Dungeon::random_description() {
+    srand(time(0));
     int num = rand() % 11;
     if (num == 0) {
         return "The room is pitch black";

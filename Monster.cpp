@@ -2,10 +2,12 @@
 #include <string>
 #include "Monster.h"
 #include <vector>
+#include <ctime>
 
 using namespace std;
 
 Monster::Monster(int difficulty) {
+    srand(time(0));
     int num = (rand() % difficulty) + 1;
     if (num == 1) {
         name = "Rat";

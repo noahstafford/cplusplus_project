@@ -1,7 +1,1 @@
-﻿  Character.cpp
-C:\Users\noahs\source\repos\cplusplus_project\Character.cpp(26,59): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\noahs\source\repos\cplusplus_project\Character.cpp(28,29): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-C:\Users\noahs\source\repos\cplusplus_project\Character.cpp(29,35): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  Main.cpp
-  Generating Code...
-  cplusplus_project.vcxproj -> C:\Users\noahs\source\repos\cplusplus_project\x64\Debug\cplusplus_project.exe
+﻿LINK : fatal error LNK1168: cannot open C:\Users\noahs\source\repos\cplusplus_project\x64\Debug\cplusplus_project.exe for writing
