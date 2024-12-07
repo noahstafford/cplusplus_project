@@ -30,6 +30,8 @@ void Character::level_up() {
         cout << "Experience needed for next level up: " << experience_to_level_up << " -> ";
         experience_to_level_up += (experience_to_level_up * .25);
         cout << experience_to_level_up << endl;
+        cout << "Attack: " << attack << " -> ";
+        attack += (attack * .1);
         cout << "Critical hit chance: " << critical_hit_chance << " -> ";
         critical_hit_chance += 2;
         cout << critical_hit_chance << endl;
@@ -97,12 +99,16 @@ int Character::get_health() {
     return current_health;
 }
 
+int Character::get_max_health() {
+    return max_health;
+}
+
 void Character::set_health(int new_health) {
     current_health = new_health;
 }
 
 void Character::set_attack(int attack_power) {
-    attack = attack_power;
+    attack += attack_power;
 }
 
 int Character::get_experience() {
@@ -126,7 +132,7 @@ void Character::get_stats() {
     cout << "Health: " << current_health << "/" << max_health << endl;
     cout << "Experience: " << experience << "/" << experience_to_level_up << endl;
     cout << "Attack: " << attack << endl;
-    cout << "Defense: " << defense << endl;
+    //cout << "Defense: " << defense << endl;
 }
 
 int Character::players_turn() {

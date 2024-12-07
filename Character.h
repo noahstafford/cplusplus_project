@@ -29,6 +29,7 @@ class Character
         void get_stats();
         void start_battle(Monster monster);
         int players_turn();
+        int get_max_health();
     private:
         string name;
         int level;

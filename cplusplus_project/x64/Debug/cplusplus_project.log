@@ -1,1 +1,7 @@
-﻿  cplusplus_project.vcxproj -> C:\Users\noahs\source\repos\cplusplus_project\x64\Debug\cplusplus_project.exe
+﻿  Dungeon.cpp
+C:\Users\noahs\source\repos\cplusplus_project\Dungeon.cpp(26,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\noahs\source\repos\cplusplus_project\Dungeon.cpp(120,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\noahs\source\repos\cplusplus_project\Dungeon.cpp(143,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\noahs\source\repos\cplusplus_project\Dungeon.cpp(178,1): warning C4715: 'Dungeon::random_description': not all control paths return a value
+C:\Users\noahs\source\repos\cplusplus_project\Dungeon.cpp(63,1): warning C4715: 'Dungeon::random_event': not all control paths return a value
+  cplusplus_project.vcxproj -> C:\Users\noahs\source\repos\cplusplus_project\x64\Debug\cplusplus_project.exe

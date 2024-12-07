@@ -24,6 +24,7 @@ int main() {
 
     Character player(name);
     Dungeon dungeon(rooms, difficulty);
+    int randomevent;
     //Monster monster("", 0, 0, 0, 0, "");
     //Monster monster(difficulty);
 
@@ -36,6 +37,21 @@ int main() {
         player.start_battle(monster);
         if (player.get_health() <= 0) {
             x = rooms;
+        }
+        randomevent = dungeon.random_event();
+        if (randomevent == 2) {
+            player.set_health(player.get_max_health());
+        }
+        else if (randomevent == 3) {
+            Monster monster(difficulty);
+            monster.get_info();
+            player.start_battle(monster);
+            if (player.get_health() <= 0) {
+                x = rooms;
+            }
+        }
+        else if (randomevent == 4) {
+            player.set_attack(1);
         }
         cout << endl;
     }

@@ -14,7 +14,7 @@ class Dungeon
         void create_room(string choice);
         void create_encounter();
         Monster spawn_monster();
-        void random_event();
+        int random_event();
         vector<string> generate_dungeon();
         bool validate_choice(string choice, vector<string> rooms);
         void select_next_room();

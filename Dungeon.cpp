@@ -22,12 +22,48 @@ void Dungeon::create_encounter() {
 
 }
 
-void Dungeon::random_event() {
+int Dungeon::random_event() {
+    srand(time(0));
+    string response = "";
+    int num = rand() % 3;
+    if (num == 0) {
+        cout << endl << "You find a chest in the corner of the room." << endl;
+        while (response != "y" && response != "n") {
+            cout << "Do you open it? (y or n): ";
+            cin >> response;
+        }
 
+        if (response == "y") {
+            num = (rand() % 4) + 1;
+            if (num == 1) {
+                cout << endl << endl << "..... there was nothing inside." << endl;
+                return 0;
+            }
+            else if (num == 2) {
+                cout << endl << endl << "There was a healing potion inside. You are now at full health!" << endl;
+                return 2;
+            }
+            else if (num == 3) {
+                cout << endl << endl << "There is another enemy inside!" << endl;
+                return 3;
+            }
+            else if (num == 4) {
+                cout << endl << endl << "There was a strength potion inside. Your attack has increased by 1!" << endl;
+                return 4;
+            }
+        }
+        else {
+            cout << "Safe choice.";
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
 }
 
 void Dungeon::select_next_room() {
-    srand(time(0));
+    
     vector<string> rooms = generate_dungeon();
     string choice = "";
     bool validchoice = false;
